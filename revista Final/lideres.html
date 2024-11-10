@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lideres</title>
+    <link rel="stylesheet" href="lideres.css">
+    <style>
+        /* Establecer Arial como fuente global para todo el documento */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo para la barra de navegación */
+        header {
+            background-color: #222;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-icons a {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        /* Estilo para la sección del carrusel */
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            justify-content: center;
+        }
+        
+        .carousel-item {
+            flex: 0 0 45%;
+            max-width: 45%;
+            position: relative;
+            scroll-snap-align: start;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para los botones */
+        #prev-button, #next-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            z-index: 1000;
+        }
+
+        #prev-button {
+            left: 10px;
+        }
+
+        #next-button {
+            right: 10px;
+        }
+
+        /* Estilo para la sección editorial */
+        .editorial-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .editorial-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .editorial-image {
+            flex: 0 0 45%; /* Controla el tamaño de la imagen */
+            max-width: 45%;
+        }
+
+        .editorial-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .editorial-content {
+            flex: 1;
+            max-width: 50%; /* Controla el tamaño del bloque de texto */
+        }
+
+        .editorial-content h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .editorial-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+            font-weight: 300;
+            text-align: justify; /* Justifica el texto */
+        }
+
+        /* Segunda sección editorial sin fondo */
+        .editorial-section-alt {
+            padding: 40px 20px;
+            text-align: left;
+            margin-top: 40px;
+            background-color: transparent; /* Eliminar el fondo */
+        }
+
+        .editorial-container-alt {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .editorial-image-alt {
+            flex: 1 1 50%;
+            max-width: 60%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .editorial-image-alt img {
+            width: 100%;
+            height: auto;
+        }
+
+        .editorial-content-alt {
+            flex: 1 1 50%;
+            max-width: 60%;
+            padding: 20px;
+        }
+
+        .editorial-content-alt h2 {
+            color: #333;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .editorial-content-alt p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .editorial-content-alt .btn-read-more {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .editorial-content-alt .btn-read-more:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="index.html" class="logo">VOGUE</a>
+    
+            <!-- Enlaces de navegación -->
+            <div class="nav-links">
+                <a href="noticias.html">Noticias</a>
+                <a href="Espaciovogue.html">Espacio Vogue</a>
+                <a href="tendencias.html">Tendencias</a>
+                <a href="lideres.html" class="active">Líderes</a>
+            </div>
+    
+            <!-- Iconos de navegación -->
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de carrusel horizontal con texto -->
+    <section class="image-carousel" style="padding: 20px;">
+        <h2 class="section-title"></h2>
+        <div class="carousel-container">
+            <!-- Imagen 1 -->
+            <div class="carousel-item">
+                <img src="imagenes/lider-carrusel-1.jpeg" alt="Imagen 1">
+                <div class="overlay">
+                    <h2>Consejos para no sumarte a los trabajadores ocultos</h2>
+                    <p>Estrategias para dejar de ser invisible y destacar en un entorno laboral cada vez más digital y competitivo</p>
+                </div>
+            </div>
+
+            <!-- Imagen 2 -->
+            <div class="carousel-item">
+                <img src="imagenes/lider-carrusel-2.jpeg" alt="Imagen 2">
+                <div class="overlay">
+                    <h2>Los abrigos de leopardo perfectos para crear 'looks' de oficina este invierno 2024/2025</h2>
+                    <p>El estampado más popular de las últimas temporadas se instaura como un elemento clave en las características que protagonizan las prendas de abrigo</p>
+                </div>
+            </div>
+
+            <!-- Imagen 3 -->
+            <div class="carousel-item">
+                <img src="imagenes/lider-carrusel-3.jpeg" alt="Imagen 3">
+                <div class="overlay">
+                    <h2>Innovación, formación y tecnología: cómo hacer frente a los retos de los emprendedores</h2>
+                    <p>¿Quién dijo que emprender era fácil? Cuando se trata de dar un buen servicio, aprender nuevas habilidades y adquirir herramientas innovadoras puede marcar la diferencia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <button id="prev-button">&#10094;</button>
+        <button id="next-button">&#10095;</button>
+    </section>
+
+    <!-- Sección Editorial -->
+    <section class="editorial-section">
+        <h2 class="section-title"></h2>
+        <div class="editorial-container">
+            <div class="editorial-image">
+                <img src="imagenes/mujer arte.jpeg" alt="Imagen Editorial">
+            </div>
+            <div class="editorial-content">
+                <h2>El Futuro del Arte: Un vistazo a las artistas contemporáneas</h2>
+                <p>Estas cuatro artistas nos muestran un panorama de lo que puede llegar a ser el futuro del arte. Cada una tiene su propia forma de entender la práctica artística, pero todas coinciden en algo: el arte debe, ante todo, ser un reflejo de los valores contemporáneos, en constante revisión y cuestionamiento.</p>
+                <p>De hecho, mientras los estudios de Derecho apartaron a Marta Suárez-Mansilla (Santiago de Compostela, 1982) del universo de las artes, fue solo brevemente. “Las inquietudes creativas nacieron conmigo”, asegura esta abogada especializada en arte, gestión cultural y nuevas tecnologías, que ocupa la vicepresidencia de ADA Projects y es fundadora de Artworld Law...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva Sección Editorial (sin fondo) -->
+    <section class="editorial-section-alt">
+        <div class="editorial-container-alt">
+            <div class="editorial-image-alt">
+                <img src="imagenes/lider-final.jpeg" alt="Imagen Editorial Alternativa">
+            </div>
+            <div class="editorial-content-alt">
+                <h2>Por qué es importante dejar un tiempo entre proyectos laborales</h2>
+                <p>En un momento en donde la hiperproductividad parecer ocuparlo todo, ¿sería sensato hacer un parón? Darle a nuestra mente una especie de ayuno de pensamiento estructurado, se antoja como una estrategia necesaria para poder alcanzar ese estado de inspiración. Algo que parece confirmar el neurocientífico John Kounios, quien habla de que cuando tenemos una idea repentina, el cerebro pasa por un proceso fascinante, donde lo primero que sucede es un apagón en el córtex visual, una breve pausa en la visión que filtra distracciones externas y permite enfocarnos internamente. Es entonces cuando se genera una explosión de ondas cerebrales de alta frecuencia, una señal de que algo importante está a punto de ocurrir...</p>
+                <a href="#" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript para el carrusel
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector(".carousel-container");
+            let scrollAmount = 0;
+
+            // Función para desplazar el carrusel
+            function scrollCarousel(direction) {
+                const itemWidth = container.children[0].offsetWidth;
+                if (direction === "next") {
+                    scrollAmount += itemWidth;
+                } else {
+                    scrollAmount -= itemWidth;
+                }
+                container.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+            }
+
+            // Agregar controles si es necesario
+            const nextButton = document.querySelector("#next-button");
+            const prevButton = document.querySelector("#prev-button");
+
+            nextButton.addEventListener("click", function() {
+                scrollCarousel("next");
+            });
+            prevButton.addEventListener("click", function() {
+                scrollCarousel("prev");
+            });
+        });
+    </script>
+<!-- Pie de Página Mejorado -->
+<footer>
+    <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #333; color: #fff;">
+        <div class="footer-logo">
+            <a href="#" style="font-size: 24px; font-weight: bold; text-decoration: none; color: #fff;">VOGUE</a>
+        </div>
+        <div class="footer-links" style="display: flex; gap: 20px;">
+            <a href="#" style="color: #fff; text-decoration: none;">Sobre nosotros</a>
+            <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a>
+            <a href="#" style="color: #fff; text-decoration: none;">Contacto</a>
+        </div>
+        <div class="footer-social" style="display: flex; gap: 20px;">
+            <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Incluir Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+                </div>
+            </nav>
+        </header>
+</body>
+</html>

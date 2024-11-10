@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tendencias</title>
+    <link rel="stylesheet" href="tendenciasstyle.css">
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .nav-icons a {
+            margin: 0 10px;
+        }
+
+        .nav-icons img {
+            width: 20px;
+            height: 20px;
+        }
+
+        
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 100px 20px 20px;
+        }
+
+        .catalogo-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .catalogo-item:hover {
+            transform: scale(1.05);
+        }
+
+        .catalogo-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .catalogo-text {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .catalogo-text h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .catalogo-text p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+       
+        .galeria {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .galeria h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .galeria-imagenes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .galeria-imagenes img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-imagenes img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #222; color: #fff;">
+            
+            <a href="index.html" class="logo" style="font-size: 24px; font-weight: bold; color: #fff; text-decoration: none;">VOGUE</a>
+    
+            <div class="nav-links" style="display: flex; gap: 20px;">
+                <a href="noticias.html" style="color: #fff; text-decoration: none;">Noticias</a>
+                <a href="Espaciovogue.html" style="color: #fff; text-decoration: none;">Espacio Vogue</a>
+                <a href="tendencias.html" style="color: #fff; text-decoration: none;">Tendencias</a>
+                <a href="lideres.html" style="color: #fff; text-decoration: none;">Líderes</a>
+            </div>
+    
+           
+            <div class="nav-icons" style="display: flex; gap: 15px;">
+                <a href="#" style="color: #fff; font-size: 20px;"><i class="fas fa-search"></i></a>
+                <a href="#" style="color: #fff; font-size: 20px;"><i class="fas fa-user"></i></a>
+                
+            </div>
+        </nav>
+    </header>
+    
+ 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+
+   
+    <section class="catalogo">
+        <div class="catalogo-item">
+            <img src="imagenes/tendencia 1.jpeg" alt="Producto 1">
+            <div class="catalogo-text">
+                <h3>Accesorios</h3>
+                <p>la tendencia apunta en dirección opuesta al lujo silencioso.</p>
+            </div>
+        </div>
+        <div class="catalogo-item">
+            <img src="imagenes/tendencia 2.jpeg" alt="Producto 2">
+            <div class="catalogo-text">
+                <h3>Colores</h3>
+                <p>las tendencias también permiten ciertas licencias cromáticas </p>
+            </div>
+        </div>
+        <div class="catalogo-item">
+            <img src="imagenes/tendencia 3.jpeg" alt="Producto 3">
+            <div class="catalogo-text">
+                <h3>Míralos! </h3>
+                <p>protagonismo recae en el torso</p>
+            </div>
+        </div>
+    </section>
+
+<section class="image-text-section" style="display: flex; padding: 40px 20px; background-color: #fff; align-items: center; gap: 20px; justify-content: center;">
+    <div class="image-container" style="flex: 1;">
+        <img src="imagenes/foto tendencia 1.jpeg" alt="Imagen de ejemplo" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="text-container" style="flex: 1; text-align: center;">
+        <h2 style="font-size: 36px; color: #333; margin-bottom: 20px;">Tendencias de primavera-verano 2024: qué se está llevando esta temporada</h2>
+        <p style="font-size: 18px; color: #666; line-height: 1.5; max-width: 600px; margin: 0 auto;">
+            Recopilamos todas las pistas sobre las prendas, siluetas y colores que más estamos viendo estas vacaciones.
+        </p>
+    </div>
+</section>
+
+
+    <section class="galeria">
+        <h2></h2>
+        <div class="galeria-imagenes">
+            <img src="imagenes/tendencia horizontal 1.jpeg" alt="Imagen adicional 1">
+            <img src="imagenes/tendencia horizontal 2.jpeg" alt="Imagen adicional 2">
+            <img src="imagenes/aros.jpeg" alt="Imagen adicional 3">
+            <img src="imagenes/cartera .jpeg" alt="Imagen adicional 4">
+           
+        </div>
+    </section>
+
+   
+<section class="centered-text" style="text-align: center; padding: 40px 20px; background-color: #f4f4f4;">
+    <h2 style="font-size: 24px; color: #333; margin-bottom: 20px;"></h2>
+    <p style="font-size: 16px; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.8; text-align: justify;">
+        Si hay una tendencia por excelencia de cara a la próxima primavera 2024, esa viene definida por una silueta de quarterback en la que todo el protagonismo recae en el torso. Se llevan hombreras esculturales, que perfilan una figura a menudo triangular, muy propia de los años 80, contrastando hombros marcados con cinturas muy finas.
+        <br><br>
+        Es la máxima que encontramos, por ejemplo, en Max Mara o en la sastrería de Prada, quien propone chaquetas de mangas largas por debajo de shorts de talle alto y cinturón.
+        <br><br>
+        En el sentido opuesto, la tónica pasa por blazers con hombreras XL y patrones igual de oversize, combinadas con faldas plisadas, como en Lapointe, shorts, como en Jil Sander o sin nada debajo, en línea con Vuitton o Area.
+        <br><br>
+        El estilo más utilitario lo encontramos en Khaite, con trenchs que evocan las que se llevaron en los años de la Segunda Guerra Mundial. El punto desaliñado y romántico lo pone Galliano al frente de Margiela en looks en blanco y negro.
+    </p>
+</section>
+
+
+ <section class="image-text-section" style="display: flex; padding: 40px 20px; background-color: #fff; align-items: center; gap: 20px;">
+    <div class="image-container" style="flex: 1;">
+        <img src="imagenes/pantalon pirata.jpeg" alt="Imagen de ejemplo" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="text-container" style="flex: 1;">
+        <h2 style="font-size: 24px; color: #333; margin-bottom: 15px;">Unos pantalones: los piratas</h2>
+        <p style="font-size: 16px; color: #666; line-height: 1.5;">
+            Lo adelantamos la pasada primavera y en 2024 lo volvemos a ratificar: el denostado pantalón pirata, con su reconocible corte justo por encima de la rodilla, está de vuelta. Phillip Lim, Ferragamo y Coperni proponen la versión más deportiva, hasta con el elástico del chándal, que se combina con camisas de rayas y blazers cortas para dar un giro fresco a la sastrería. Dior opta por una versión crema en satén, un acabado sofisticado que también emplea Nº21 para sus conjuntos pijameros. Blumarine, fiel a la estética dosmilera, propone llevarlos a la vertiente más festiva en un vivo tono dorado.
+    </div>
+</section>
+
+   
+   <section class="galeria">
+    <h2></h2>
+    <div class="galeria-imagenes">
+        <img src="imagenes/pantalon 1.jpeg" alt="Imagen adicional 1">
+        <img src="imagenes/pantalon 2.jpeg" alt="Imagen adicional 2">
+        <img src="imagenes/polera pirata .jpeg" alt="Imagen adicional 3">
+        <img src="imagenes/pantalon 3.jpeg" alt="Imagen adicional 4">
+       
+    </div>
+</section>
+
+
+ <section class="image-text-section" style="display: flex; padding: 40px 20px; background-color: #fff; align-items: center; gap: 20px;">
+    <div class="image-container" style="flex: 1;">
+        <img src="imagenes/top polo .jpeg" alt="Imagen de ejemplo" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="text-container" style="flex: 1;">
+        <h2 style="font-size: 24px; color: #333; margin-bottom: 15px;">Un top: el polo</h2>
+        <p style="font-size: 16px; color: #666; line-height: 1.5;">
+            Olvida el tank-top blanco: la camiseta por antonomasia de esta primavera-verano 2024 viene con unas coordenadas muy específicas que centran la atención justo debajo del rostro. Se lleva el cuello polo, en prendas que van desde las referencias al rugby de GDCS, pasando por el tenis en Gucci (con microshorts a juego). Ralph Lauren lo propone incluso de noche, en color dorado y con una maxi falda en color negro. Miu Miu y Rachel Comey se decantan por la estética preppy, en clave dosmilera y masculina oversize, respectivamente, con chaqueta a juego.
+    </div>
+</section>
+
+   <section class="galeria">
+    <h2></h2>
+    <div class="galeria-imagenes">
+        <img src="imagenes/top 1.jpeg" alt="Imagen adicional 1">
+        <img src="imagenes/top 2.jpeg" alt="Imagen adicional 2">
+        <img src="imagenes/top 3.jpeg" alt="Imagen adicional 3">
+        <img src="imagenes/top 4.jpeg" alt="Imagen adicional 4">
+       
+    </div>
+</section>
+
+
+<section class="centered-text" style="text-align: center; padding: 40px 20px; background-color: #f4f4f4;">
+    <h2 style="font-size: 24px; color: #333; margin-bottom: 20px;"></h2>
+    <p style="font-size: 16px; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.8; margin-top: 10px; text-align: justify;">
+        Si hay algo que deja claro la temporada que viene, es que va a tocar enseñar mucha, mucha pierna. El fenómeno no-pants del otoño pasado se consolida en primavera verano 2024 a través de bragas de punto en total look, como proponen Carolina Herrera, Chanel o Michael Kors. Una vuelta de tuerca al twin-set que se aleja de las versiones dosmileras vistas en otras colecciones y que restan unos cuantos centímetros a todas las prendas inferiores del armario.
+        <br><br>
+        Los shorts evolucionan a hot-pants, que contrastan con abrigadas prendas, como las sudaderas de Gucci o los jerséis de punto de Max Mara. Mientras, las minifaldas se vuelven microfaldas para reinventar estilos como el preppy, cortesía de Miu Miu.
+        <br><br>
+        Lo llevamos diciendo desde hace meses: el complemento que más va arrasar en próximos meses probablemente sea el más humilde del armario. Los calcetines dejan de ser una pieza con la que abrigar el pie para convertirse en un objeto de deseo. Más allá del socorrido calcetín blanco con mocasines, las tendencias de primavera verano 2024 apuntan a un calcetín más bien alto que se combina con todo tipo de zapatos. Si Givenchy o Jil Sander proponen hacer match cromático entre los tacones y los calcetines en tonos como el rojo, el blanco o el azul, MSGM opta por sandalias en tonos vibrantes a contraste con unas acanaladas medias en gris vigoré. También pueden suponer una nota divertida al look a través del estampado, como dejan claro Etro o Dries Van Noten.
+    </p>
+</section>
+
+
+<section class="two-column-gallery" style="padding: 40px 20px; background-color: #f4f4f4;">
+    <div style="display: flex; gap: 20px; justify-content: space-between;">
+        <div style="flex: 1; position: relative;">
+            <img src="imagenes/falda.jpeg" alt="Imagen 1" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
+        </div>
+        <div style="flex: 1; position: relative;">
+            <img src="imagenes/calcetin-1.jpeg" alt="Imagen 2" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
+        </div>
+    </div>
+</section>
+
+<section class="image-text-section" style="display: flex; padding: 40px 20px; background-color: #fff; align-items: center; gap: 20px;">
+    <div class="image-container" style="flex: 1;">
+        <img src="imagenes/azul.jpeg" alt="Imagen de ejemplo" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="text-container" style="flex: 1;">
+        <h2 style="font-size: 24px; color: #333; margin-bottom: 15px;">Un color: el azul</h2>
+        <p style="font-size: 16px; color: #666; line-height: 1.5;">
+            A pesar de la primavera-verano 2024 tan oscura que nos espera, las tendencias también permiten ciertas licencias cromáticas que ponen el azul en el punto de mira. En Copenhague ya vimos que era uno de los tonos populares, y el resto de capitales de la moda no han hecho sino confirmarlo: el azul bebé, en particular, será uno de los que arrase en los meses venideros, en toda prenda posible. Por un lado encontramos irresistibles abrigos acharolados, como los de Proenza Schouler. Pero también trajes de chaqueta, como en Versace o Staud. Rodarte o Fashion East lo versionan en formato vestido que también se tiñe de pies a cabeza, mientras que Palomo Spain juega con este matiz a través de las transparencias estampadas. En algunas firmas este tono deriva hacia tintes más verdosos, como sucede en Fendi o Jason Wu.
+    </div>
+</section>
+
+  
+   <section class="galeria">
+    <h2></h2>
+    <div class="galeria-imagenes">
+        <img src="imagenes/pantone-1.jpeg" alt="Imagen adicional 1">
+        <img src="imagenes/pantone-2.jpeg" alt="Imagen adicional 2">
+        <img src="imagenes/pantone-3.jpeg" alt="Imagen adicional 3">
+        <img src="imagenes/pantone- 4.jpeg" alt="Imagen adicional 4">
+       
+    </div>
+</section>
+
+
+<section class="image-text-section" style="display: flex; padding: 40px 20px; background-color: #fff; align-items: center; gap: 20px;">
+    <div class="image-container" style="flex: 1;">
+        <img src="imagenes/joyas.jpeg" alt="Imagen de ejemplo" style="width: 100%; height: auto; border-radius: 8px;">
+    </div>
+    <div class="text-container" style="flex: 1;">
+        <h2 style="font-size: 24px; color: #333; margin-bottom: 15px;">Joyas XXL</h2>
+        <p style="font-size: 16px; color: #666; line-height: 1.5;">
+            En cuestión de joyero, la tendencia apunta en dirección opuesta al lujo silencioso. Se llevan piezas rotundas, en cualquiera de los accesorios que se nos ocurra. Schiaparelli o Saint Laurent proponen pendientes mayúsculos, con cierto deje ochentero, que se combinan con cuellos escotados para darles protagonismo. Carolina Herrera opta por diseños ligeramente más discretos y a juego con el conjunto al que acompaña el complemento, mientras que Blumarine sigue fiel al espíritu dosmilero con collares casi tipo choker, muy grandes y anchos.
+    </div>
+</section>
+
+
+   <section class="galeria">
+    <h2></h2>
+    <div class="galeria-imagenes">
+        <img src="imagenes/joyas-1.jpeg" alt="Imagen adicional 1">
+        <img src="imagenes/joyas-2.jpeg" alt="Imagen adicional 2">
+        <img src="imagenes/joyas-3.jpeg" alt="Imagen adicional 3">
+        <img src="imagenes/joyas-4.jpeg" alt="Imagen adicional 4">
+       
+    </div>
+</section>
+
+   
+   <footer>
+    <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #333; color: #fff;">
+        <div class="footer-logo">
+            <a href="#" style="font-size: 24px; font-weight: bold; text-decoration: none; color: #fff;">VOGUE</a>
+        </div>
+        <div class="footer-links" style="display: flex; gap: 20px;">
+            <a href="#" style="color: #fff; text-decoration: none;">Sobre nosotros</a>
+            <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a>
+            <a href="#" style="color: #fff; text-decoration: none;">Contacto</a>
+        </div>
+        <div class="footer-social" style="display: flex; gap: 20px;">
+            <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+
+
+
+</body>
+</html>
+

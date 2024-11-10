@@ -1,0 +1,288 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+
+header {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-icons a img {
+    width: 20px;
+    margin-left: 15px;
+}
+
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+
+.horizontal-gallery {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.horizontal-gallery h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.horizontal-images {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.horizontal-images img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.large-image-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%;
+}
+
+.text-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.text-container p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.text-container .button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.text-container .button:hover {
+    background-color: #555;
+}
+
+
+
+
+@media (max-width: 768px) {
+   
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar .logo {
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+   
+    .carousel-caption {
+        font-size: 1.2em;
+        bottom: 15px;
+    }
+
+    .carousel-btn {
+        font-size: 1.5em;
+    }
+
+ 
+    .horizontal-gallery h2 {
+        font-size: 1.6em;
+    }
+
+    .horizontal-images img {
+        width: 250px;
+    }
+
+    
+    .large-image-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container, .text-container {
+        max-width: 100%;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text-container {
+        padding: 10px;
+    }
+
+    .text-container h2 {
+        font-size: 1.6em;
+    }
+
+    .text-container p {
+        font-size: 1em;
+    }
+}
+
+
+@media (max-width: 480px) {
+   
+    .navbar .logo {
+        font-size: 1.5em;
+    }
+
+    .nav-links a {
+        font-size: 0.9em;
+    }
+
+  
+    .carousel-caption {
+        font-size: 1.1em;
+    }
+
+    .carousel-btn {
+        font-size: 1.2em;
+    }
+
+   
+    .horizontal-gallery h2 {
+        font-size: 1.4em;
+    }
+
+    .horizontal-images img {
+        width: 200px;
+    }
+
+    .large-image-text .text-container {
+        font-size: 0.9em;
+    }
+
+    .large-image-text .image-container img {
+        max-width: 100%;
+    }
+}

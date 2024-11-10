@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Vogue</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            display: none;
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .carousel-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .image-item {
+            position: relative;
+            flex: 0 0 40%;
+            max-width: 40%;
+            scroll-snap-align: start;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .overlay h2 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+
+        .overlay p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+  
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">VOGUE</a>
+            <div class="nav-links">
+                <a href="noticias.html">Noticias</a>
+                <a href="Espaciovogue.html">Espacio Vogue</a>
+                <a href="tendencias.html">Tendencias</a>
+                <a href="lideres.html">Líderes</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="carousel">
+        <div class="carousel-item active">
+            <img src="imagenes/foto principal home.jpeg" alt="Imagen 1">
+            <div class="carousel-caption"></div>
+        </div>
+        <div class="carousel-item">
+            <img src="imagenes/segunda foto principal .jpeg" alt="Imagen 2">
+            <div class="carousel-caption"></div>
+        </div>
+        <div class="carousel-item">
+            <img src="imagenes/tercera foto principal .jpeg" alt="Imagen 3">
+            <div class="carousel-caption"></div>
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </section>
+
+  
+    <section class="horizontal-gallery">
+        <h2>Explora Más</h2>
+        <div class="horizontal-images">
+            <img src="imagenes/1 horizontal .jpeg" alt="Imagen pequeña 1">
+            <img src="imagenes/2 horizontal.jpeg" alt="Imagen pequeña 2">
+            <img src="imagenes/3 horizontal.jpeg" alt="Imagen pequeña 3">
+            <img src="imagenes/4 horizontal.jpeg" alt="Imagen pequeña 4">
+        </div>
+    </section>
+
+    <section class="large-image-text">
+        <div class="image-container">
+            <img src="imagenes/vogue jz.jpeg" alt="Imagen destacada">
+        </div>
+        <div class="text-container">
+            <h2>"Es increíble tener ese sentimiento como de volver a empezar, y es algo que me dieron la actuación y la producción"</h2>
+            <p>Juanpa Zurita salta de las redes a la pantalla con un único objetivo: contarte historias con vida propia.</p>
+            <a href="vercoleccion.html" class="button">Leer más...</a>
+        </div>
+    </section>
+
+    <section class="image-gallery">
+        <h2 class="section-title">Tendencias de Belleza que Revolucionan el Mundo de la Moda</h2>
+        <div class="gallery-item">
+            <img src="imagenes/ropa.jpeg" alt="Fashion Item 1">
+            <p class="caption">Todos hablan de sus efectos en la piel, pero nadie menciona las propiedades antiinflamatorias de esta planta milenaria</p>
+        </div>
+        <div class="gallery-item">
+            <img src="imagenes/2 piel .jpeg" alt="Fashion Item 2">
+            <p class="caption">La crema de los (casi) 100 años: los usos inesperados que le da una famosa maquilladora</p>
+        </div>
+        <div class="gallery-item">
+            <img src="imagenes/pamela anderson.jpeg" alt="Fashion Item 3">
+            <p class="caption">'No te maquilles tanto', dicen, pero te critican si dejas a la vista ojeras, manchas o acné. ¿Te suena?</p>
+        </div>
+    </section>
+    
+
+<section class="image-gallery" style="padding: 20px;">
+    <h2 class="section-title" style="text-align: center; margin-bottom: 20px;"></h2>
+    <div class="carousel-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; align-items: center; width: 100%; margin: 0 auto;">
+        <div class="image-item" style="flex: 0 0 45%; max-width: 45%; text-align: center;">
+            <img src="imagenes/matrimonio.jpeg" alt="Imagen 1" style="width: 100%; height: auto;">
+            <div class="overlay">
+                <h2>Lana Condor y Anthony De La Torre se casaron en una ceremonia íntima en Malibú (y al día siguiente se hicieron tatuajes a juego)</h2>
+                <p>La actriz de la trilogía de A todos los chicos de los que me enamoré y el actor y músico Anthony De La Torre se inspiraron en el ambiente otoñal y en el estilo español del retiro donde celebraron su enlace</p>
+            </div>
+        </div>
+        
+        <div class="image-item" style="flex: 0 0 45%; max-width: 45%; text-align: center;">
+            <img src="imagenes/compras .jpeg" alt="Imagen 2" style="width: 100%; height: auto;">
+            <div class="overlay">
+                <h2>Los mejores regalos para mujer seleccionados por las editoras de Vogue</h2>
+                <p>¿En busca de los mejores regalos para mujer? Desde caprichos de moda hasta productos icónicos de belleza, inspírate en las listas de deseos de las editoras de Vogue</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Inspirada en Zara</title>
+    <link rel="stylesheet" href="style.css"> <!-- Tu CSS general -->
+    <style>
+      
+        .editorial-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .editorial-text {
+            flex: 1;
+            max-width: 50%;
+            padding-right: 40px;
+            color: #333;
+        }
+
+        .editorial-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .editorial-text p {
+            font-size: 18px;
+            font-weight: 300;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-read-more {
+            font-size: 16px;
+            color: #fff;
+            background-color: #000;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-read-more:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .editorial-image {
+            flex: 1;
+            max-width: 50%;
+            text-align: center;
+        }
+
+        .editorial-image img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .editorial-image img:hover {
+            transform: scale(1.05);
+        }
+
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .editorial-text {
+                max-width: 100%;
+                padding-right: 0;
+            }
+
+            .editorial-image {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+
+            .editorial-image img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+<section class="editorial-section">
+    <div class="container">
+      
+        <div class="editorial-text">
+            <h2>"Jennie revela cómo el frío alivia sus músculos y despeja su mente"</h2>
+            <p>
+                Jennie, una de las figuras más destacadas de la música pop, siente una mezcla de emoción y nerviosismo antes de comenzar su actividad de bienestar favorita: el baño de hielo. 'Aunque me guste, siempre me da un poco de miedo', comenta la cantante de Blackpink en nuestra última entrega de Well, Well, Well. 
+            </p>
+            <a href="#" class="btn-read-more">Descubre más</a>
+        </div>
+
+        
+        <div class="editorial-video">
+            <embed src="https://www.youtube.com/v/HZs1a6n0q7c?version=3&autohide=1" width="800" height="450" type="application/x-shockwave-flash"></embed>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+    
+    <footer>
+        <div class="footer-content" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #333; color: #fff;">
+            <div class="footer-logo">
+                <a href="#" style="font-size: 24px; font-weight: bold; text-decoration: none; color: #fff;">VOGUE</a>
+            </div>
+            <div class="footer-links" style="display: flex; gap: 20px;">
+                <a href="#" style="color: #fff; text-decoration: none;">Sobre nosotros</a>
+                <a href="#" style="color: #fff; text-decoration: none;">Política de privacidad</a>
+                <a href="#" style="color: #fff; text-decoration: none;">Contacto</a>
+            </div>
+            <div class="footer-social" style="display: flex; gap: 20px;">
+                <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color: #fff; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
